@@ -1,0 +1,66 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS CUSTOM PROPERTIES BEGIN */
+
+:root {
+  /* PRIMARY */
+  --color-scissors-gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --color-paper-gradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --color-rock-gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --color-lizard-gradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  --color-cyan: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  /* NEUTRAL */
+  --color-text-dark: hsl(229, 25%, 31%);
+  --color-text-score: hsl(229, 64%, 46%);
+  --color-outline-header: hsl(217, 16%, 45%);
+  /* BACKGROUND */
+  --color-radial-gradient: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  /* FONTS */
+  --body-font: 'Barlow Semi Condensed', sans-serif;
+}
+
+/* CSS CUSTOM PROPERTIES END */
