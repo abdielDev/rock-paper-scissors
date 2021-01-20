@@ -57,10 +57,46 @@ table {
   --color-text-score: hsl(229, 64%, 46%);
   --color-outline-header: hsl(217, 16%, 45%);
   /* BACKGROUND */
-  --color-radial-gradient: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --color-radial-gradient: radial-gradient(circle farthest-side at 50% 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
   /* FONTS */
   --body-font: 'Barlow Semi Condensed', sans-serif;
 }
 
 /* CSS CUSTOM PROPERTIES END */
+
+.app {
+  height: 100vh;
+  background: var(--color-radial-gradient);
+  padding: 40px;
+  font-family: var(--body-font);
+  text-align: center;
+}
+
+.header {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 20px;
+  border: 2px solid var(--color-outline-header);
+  border-radius: 10px;
+  .score {
+    padding: 15px 50px;
+    border-radius: 8px;
+    background-color: #F7F7F7;
+    text-align: center;
+    box-shadow: 2px 3px 2px #000;
+    h1 {
+      font-size: 4.5rem;
+      color: #575467;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-text-score);
+      font-weight: 600;
+    }
+  }
+}
