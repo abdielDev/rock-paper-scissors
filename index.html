@@ -8,19 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -35,7 +22,7 @@
         <h1>12</h1>
       </div>
     </div>
-    <div class="options">
+    <!-- <div class="options">
       <div class="options-btn options-btn-paper">
         <button>
           <img src="./images/icon-paper.svg" alt="paper option">
@@ -50,6 +37,33 @@
         <button>
           <img src="./images/icon-rock.svg" alt="rock option">
         </button>
+      </div>
+    </div> -->
+    <div class="picked-options winner">
+      <div class="picked-options-container">
+        <h2>You picked</h2>
+        <div class="options-btn options-btn-paper">
+          <button>
+            <img src="./images/icon-paper.svg" alt="paper option">
+          </button>
+        </div>
+      </div>
+      <div class="victorious">
+        <div class="victorious-container">
+          <h1>You lose</h1>
+          <button>Play again</button>
+        </div>
+      </div>
+      <div class="picked-options-container">
+        <h2>The house picked</h2>
+        <!-- <div class="no-option">
+          <div class="no-option-empty"></div>
+        </div> -->
+        <div class="options-btn options-btn-rock">
+          <button>
+            <img src="./images/icon-rock.svg" alt="rock option">
+          </button>
+        </div>
       </div>
     </div>
     <button class="rules-btn">Rules</button>
