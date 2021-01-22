@@ -1,0 +1,28 @@
+.header {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 20px;
+  border: 2px solid var(--color-outline-header);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  .score {
+    padding: 15px 50px;
+    border-radius: 8px;
+    background-color: #F7F7F7;
+    text-align: center;
+    box-shadow: 2px 3px 2px #000;
+    h1 {
+      font-size: 4.5rem;
+      color: #575467;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-text-score);
+      font-weight: 600;
+    }
+  }
+}

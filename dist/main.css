@@ -57,6 +57,7 @@ table {
   --color-text-score: hsl(229, 64%, 46%);
   --color-outline-header: hsl(217, 16%, 45%);
   /* BACKGROUND */
+  --color-radial-gradient: radial-gradient(circle farthest-side at 50%, at 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   --color-radial-gradient: radial-gradient(circle farthest-side at 50% 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
   /* FONTS */
@@ -70,8 +71,11 @@ table {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  background: radial-gradient(circle farthest-side at 50%, at 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background: radial-gradient(circle farthest-side at 50% 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background: var(--color-radial-gradient);
   padding: 40px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-family: var(--body-font);
   text-align: center;
   position: relative;
@@ -82,48 +86,57 @@ table {
   justify-content: space-between;
   width: 60%;
   padding: 20px;
+  border: 2px solid hsl(217, 16%, 45%);
   border: 2px solid var(--color-outline-header);
   border-radius: 10px;
   margin-bottom: 50px;
-  .score {
+}
+
+.header .score {
     padding: 15px 50px;
     border-radius: 8px;
     background-color: #F7F7F7;
     text-align: center;
     box-shadow: 2px 3px 2px #000;
-    h1 {
+  }
+
+.header .score h1 {
       font-size: 4.5rem;
       color: #575467;
       font-weight: 700;
     }
-    h3 {
+
+.header .score h3 {
       font-size: 1.1rem;
       letter-spacing: 2px;
       text-transform: uppercase;
+      color: hsl(229, 64%, 46%);
       color: var(--color-text-score);
       font-weight: 600;
     }
-  }
-}
 
 .options {
   display: inline-block;
   width: 40%;
   height: 40%;
-  background-image: url('../images/bg-triangle.svg');
+  background-image: url(./c0c30b562fdb087666594c1bc0d512f6.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
   position: relative;
   transform: scale(1.3);
-  &-btn {
+}
+
+.options-btn {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     position: relative;
     box-shadow: inset 0 -5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    button {
+  }
+
+.options-btn button {
       border: none;
       width: 75%;
       height: 75%;
@@ -136,39 +149,48 @@ table {
       transform: translate(-50%, -50%);
       cursor: pointer;
     }
-    &-paper {
+
+.options-btn-paper {
+      background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
       background-image: var(--color-paper-gradient);
     }
-    &-scissors {
+
+.options-btn-scissors {
+      background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
       background-image: var(--color-scissors-gradient);
     }
-    &-rock {
+
+.options-btn-rock {
+      background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
       background-image: var(--color-rock-gradient);
     }
-  }
-  & &-btn-paper {
+
+.options .options-btn-paper {
     left: 45px;
     top: -60px;
   }
-  & &-btn-rock {
+
+.options .options-btn-rock {
     right: 45px;
     top: -60px;
   }
-  & &-btn-scissors {
+
+.options .options-btn-scissors {
     left: 50%;
     top: 100%;
     transform: translate(-50%, -100%);
   }
-  & &-btn {
+
+.options .options-btn {
     position: absolute;
   }
-}
 
 .rules-btn {
   padding: 10px 40px;
   border: solid 1px white;
   border-radius: 8px;
   background-color: transparent;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-family: var(--body-font);
   color: white;
   text-transform: uppercase;
@@ -184,32 +206,38 @@ table {
   display: inline-flex;
   justify-content: space-between;
   width: 50%;
-  &-container {
+}
+
+.picked-options-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h2 {
+  }
+
+.picked-options-container h2 {
       margin-bottom: 70px;
       font-size: 1.4rem;
       color: white;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-    .options-btn {
+
+.picked-options-container .options-btn {
       transform: scale(1.6);
     }
-  }
-  &.winner {
+
+.picked-options.winner {
     width: 65%;
   }
-}
 
 .no-option {
   width: 150px;
   height: 150px;
   position: relative;
   transform: scale(1.6);
-  &-empty {
+}
+
+.no-option-empty {
     width: 75%;
     height: 75%;
     border-radius: 50%;
@@ -219,30 +247,31 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
 
-.victorious {
-  &-container {
+.victorious-container {
     margin-top: 115px;
   }
-  h1 {
+
+.victorious h1 {
     margin-bottom: 15px;
     font-size: 2.5rem;
     color: white;
     text-transform: uppercase;
     font-weight: 700;
   }
-  button {
+
+.victorious button {
     padding: 10px 45px;
     border: none;
     border-radius: 8px;
     background-color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     font-family: var(--body-font);
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    &:hover {
+  }
+
+.victorious button:hover {
       color: #DD4150;
     }
-  }
-}

@@ -1,0 +1,30 @@
+.options-btn {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  button {
+    border: none;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background: white;
+    box-shadow: inset 0 7px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  &-paper {
+    background-image: var(--color-paper-gradient);
+  }
+  &-scissors {
+    background-image: var(--color-scissors-gradient);
+  }
+  &-rock {
+    background-image: var(--color-rock-gradient);
+  }
+}

@@ -1,0 +1,25 @@
+.victorious {
+  &-container {
+    margin-top: 115px;
+  }
+  h1 {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  button {
+    padding: 10px 45px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    font-family: var(--body-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    &:hover {
+      color: #DD4150;
+    }
+  }
+}
